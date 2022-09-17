@@ -40,4 +40,6 @@ venv/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-*set_env 
+
+set_env.sh
+udagram-deployment\env-configmap.yaml
