@@ -42,4 +42,12 @@ venv/
 !.elasticbeanstalk/*.global.yml
 
 set_env.sh
-udagram-deployment\env-configmap.yaml
+udagram-deployment/*
+!udagram-deployment/backend-feed-deployment.yaml
+!udagram-deployment/backend-feed-service.yaml
+!udagram-deployment/backend-user-deployment.yaml
+!udagram-deployment/backend-user-service.yaml
+!udagram-deployment/frontend-deployment.yaml
+!udagram-deployment/frontend-service.yaml
+!udagram-deployment/reverseproxy-deployment.yaml
+!udagram-deployment/reverseproxy-service.yaml
