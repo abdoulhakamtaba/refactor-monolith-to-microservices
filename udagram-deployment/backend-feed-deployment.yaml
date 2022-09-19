@@ -14,11 +14,17 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: docker.io/abdoulhakamtaba/udagram-api-feed:v1
+        image: docker.io/abdoulhakamtaba/udagram-api-feed:v6
+        envFrom:
+          - configMapRef:
+              name: env-configmap
+          - secretRef:
+              name: aws-secret
+              name: env-secret
         ports:
         - containerPort: 80
         resources:
           limits:
-            cpu: 1000m
+            cpu: 400m
           requests:
-            cpu: 500m
+            cpu: 200m

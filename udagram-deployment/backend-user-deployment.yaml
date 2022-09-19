@@ -15,10 +15,17 @@ spec:
       containers:
       - name: backend-user
         image: docker.io/abdoulhakamtaba/udagram-api-user:v1
+        envFrom:
+          - configMapRef:
+              name: env-configmap  
+          - secretRef:
+              name: aws-secret
+              name: env-secret
+
         ports:
         - containerPort: 80
         resources:
           limits:
-            cpu: 1000m
+            cpu: 400m
           requests:
-            cpu: 500m
+            cpu: 200m
